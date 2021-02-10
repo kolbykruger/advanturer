@@ -2555,6 +2555,11 @@ table td {
   height: 30vh;
   background: linear-gradient(to bottom, #e9ebec, transparent);
 }
+@media (max-width: 1300px) {
+  .impression--image {
+    left: 0;
+  }
+}
 .impression--text {
   position: absolute;
   top: 20vh;
@@ -2565,6 +2570,12 @@ table td {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+}
+@media (max-width: 1300px) {
+  .impression--text {
+    left: 6vw;
+    width: 60%;
+  }
 }
 .impression--title {
   font-family: "Rubik", sans-serif;
@@ -2585,7 +2596,7 @@ table td {
   }
 }
 .impression--description {
-  max-width: 40%;
+  max-width: 50%;
 }
 .impression--description {
   font-size: 1rem;
@@ -2604,5 +2615,5 @@ table td {
   text-decoration: none;
 }
 .impression .buttons {
-  margin-top: 2em;
+  margin-top: 3em;
 }
