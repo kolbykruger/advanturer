@@ -2,9 +2,7 @@
     margin: 0 auto;
 
     &.blog-layout {
-
         .post {
-
             &:first-of-type {
                 width: 100%;
                 display: flex;
@@ -32,21 +30,13 @@
     }
 
     .container {
-
         & > .group {
             margin: 0 -1em;
         }
-
     }
 
     .group {
-        justify-content:center;
-
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
+        justify-content: center;
     }
 
     .post {
@@ -57,8 +47,13 @@
         background: #fff;
         transition: $transition-1;
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         &:hover,
-        &:focus{
+        &:focus {
             box-shadow: $box-shadow-2;
         }
     }
@@ -71,7 +66,6 @@
             width: 100%;
             transition: $transition-1;
         }
-
     }
 
     .caption {
@@ -93,22 +87,18 @@
     }
 
     @media (max-width: 768px) {
-
         .post {
             width: calc(100% - 2em) !important;
         }
 
         &.blog-layout {
-
             .post:first-of-type {
                 display: block;
 
                 & > * {
                     width: 100%;
                 }
-
             }
         }
     }
-
 }

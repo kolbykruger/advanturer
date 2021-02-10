@@ -1,3 +1,15 @@
+//Product swatch selector (toggles between different colors + images on a product card)
+function swatchSwitcher(e) {
+    const swatch = e.dataset.id
+    const card = e.parentNode.parentNode.parentNode
+    const image = card.querySelector('.product-card--image[data-id="' + swatch + '"]')
+    const images = card.querySelectorAll('.product-card--image')
+    for (let i = 0; i < images.length; i++) {
+        images[i].style.display = 'none'
+    }
+    image.style.display = 'block'
+}
+
 //Sticky Header
 const header = document.querySelector('.header')
 const headerHeight = header.scrollHeight
@@ -90,6 +102,18 @@ $('.slideshow .container').flickity({
     pageDots: true,
     imagesLoaded: true,
     autoPlay: 5000,
+})
+
+$('.product-slider').flickity({
+    cellSelector: '.product-card',
+    wrapAround: false,
+    adaptiveHeight: false,
+    cellAlign: 'center',
+    prevNextButtons: false,
+    pageDots: true,
+    imagesLoaded: true,
+    autoPlay: 5000,
+    groupCells: 3,
 })
 
 //Universal Tables
