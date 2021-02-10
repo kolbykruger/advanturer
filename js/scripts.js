@@ -1,3 +1,24 @@
+//Impression animations
+document.addEventListener('DOMContentLoaded', function () {
+    let controller = new ScrollMagic.Controller()
+    const elem = document.querySelector('.impression .impression--image')
+    const elemImg = elem.querySelector('img')
+
+    if (elem) {
+        const parent = elem.parentNode.parentNode.parentNode.parentNode
+        if (parent) {
+            new ScrollMagic.Scene({
+                triggerElement: parent,
+                triggerHook: 1,
+                duration: '300%',
+            })
+                .setTween(TweenMax.to(elem, 1, { x: '-10%', ease: Power0.easeNone }))
+                .setTween(TweenMax.to(elemImg, 1, { y: '-15%', ease: Power0.easeNone }))
+                .addTo(controller)
+        }
+    }
+})
+
 //Product swatch selector (toggles between different colors + images on a product card)
 function swatchSwitcher(e) {
     const swatch = e.dataset.id

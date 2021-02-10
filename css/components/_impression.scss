@@ -1,0 +1,82 @@
+.impression {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background: lighten($color-4, 40%);
+    margin-top: -1px;
+
+    .container {
+    }
+
+    .group {
+    }
+
+    &--image {
+        position: absolute;
+        top: 0;
+        left: 40vw;
+        //width: 100%;
+        height: 120vh;
+        box-shadow: $box-shadow-3;
+        user-select: none;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 80%;
+            width: 20vw;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0), lighten($color-4, 40%));
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -30vw;
+            right: 0;
+            height: 30vh;
+            background: linear-gradient(to bottom, lighten($color-4, 40%), transparent);
+        }
+    }
+
+    &--text {
+        position: absolute;
+        top: 20vh;
+        bottom: 20vh;
+        left: 11vw;
+        width: 50%;
+        z-index: 3;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    &--title {
+        @include fluid('font-size', 2.5rem, 4.5rem);
+        font-family: $font-0;
+        font-weight: 300;
+        text-transform: initial;
+    }
+
+    &--description {
+        @include fluid('font-size', 1rem, 1.5rem);
+        max-width: 40%;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .buttons {
+        margin-top: 2em;
+    }
+}

@@ -840,6 +840,7 @@ hr::before {
 }
 .header.header-unsticky .nav > ul > li > a, .header.header-sticky .nav > ul > li > a {
   color: #fff;
+  font-weight: 600;
 }
 .header.header-unsticky .nav > ul > li > a:hover, .header.header-unsticky .nav > ul > li > a:focus, .header.header-sticky .nav > ul > li > a:hover, .header.header-sticky .nav > ul > li > a:focus {
   color: #bf1f2f;
@@ -1037,6 +1038,8 @@ hr::before {
   color: #231f20;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
   transition: 180ms ease;
 }
 .nav a:hover, .nav a:focus {
@@ -1484,6 +1487,11 @@ body.menu-open .mobile_nav {
 }
 .button-quartnary:hover, .button-quartnary:focus {
   background: #106583;
+}
+.button-size-small {
+  padding: 1em;
+  font-size: 0.875em;
+  min-width: 120px;
 }
 .button[disabled] {
   background: #f1f2f3;
@@ -2073,6 +2081,7 @@ p.simplesearch-results,
 .carousel {
   -webkit-user-select: none;
           user-select: none;
+  margin-bottom: 0;
 }
 .carousel .container {
   padding: 0;
@@ -2353,6 +2362,10 @@ table td {
   white-space: nowrap;
 }
 
+.products-widget {
+  padding: 6em 0;
+}
+
 .product-card {
   background: #fff;
   padding: 1.5em;
@@ -2421,6 +2434,175 @@ table td {
   bottom: 0;
   z-index: 2;
 }
+.product-slider {
+  padding: 1em 0;
+}
 .product-slider .flickity-viewport {
   width: 100%;
+}
+
+.collections .container {
+  max-width: 100%;
+  padding: 0;
+}
+.collections-item {
+  position: relative;
+  flex: 1;
+}
+.collections-item:hover .collections-item--details {
+  opacity: 1;
+  z-index: 2;
+}
+.collections-item:hover .collections-item--details * {
+  animation: collections-element-in 300ms ease forwards;
+}
+@keyframes collections-element-in {
+  from {
+    opacity: 0;
+    transform: translate(0, 1em);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.collections-item--details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background: rgba(35, 31, 32, 0.65);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  opacity: 0;
+  z-index: -1;
+  transition: 300ms ease;
+}
+.collections-item--details h3 {
+  text-align: center;
+  color: #fff;
+  animation-delay: 15ms;
+}
+.collections-item--details h3 {
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 38rem) {
+  .collections-item--details h3 {
+    font-size: calc(2.5rem + 0.625 * ((100vw - 38rem) / 32));
+  }
+}
+@media screen and (min-width: 70rem) {
+  .collections-item--details h3 {
+    font-size: 3.125rem;
+  }
+}
+.collections-item--details .buttons {
+  margin-top: 1.5em;
+}
+.collections-item--details .buttons .button:nth-of-type(1) {
+  animation-delay: 80ms;
+}
+.collections-item--details .buttons .button:nth-of-type(2) {
+  animation-delay: 115ms;
+}
+.collections-item--details * {
+  opacity: 0;
+  transform: translate(0, 1em);
+}
+
+.impression {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background: #e9ebec;
+  margin-top: -1px;
+}
+.impression--image {
+  position: absolute;
+  top: 0;
+  left: 40vw;
+  height: 120vh;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.11), 0 3px 6px rgba(0, 0, 0, 0.08);
+  -webkit-user-select: none;
+          user-select: none;
+}
+.impression--image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.impression--image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 80%;
+  width: 20vw;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #e9ebec);
+  z-index: 2;
+}
+.impression--image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30vw;
+  right: 0;
+  height: 30vh;
+  background: linear-gradient(to bottom, #e9ebec, transparent);
+}
+.impression--text {
+  position: absolute;
+  top: 20vh;
+  bottom: 20vh;
+  left: 11vw;
+  width: 50%;
+  z-index: 3;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.impression--title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  text-transform: initial;
+}
+.impression--title {
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 38rem) {
+  .impression--title {
+    font-size: calc(2.5rem + 2 * ((100vw - 38rem) / 32));
+  }
+}
+@media screen and (min-width: 70rem) {
+  .impression--title {
+    font-size: 4.5rem;
+  }
+}
+.impression--description {
+  max-width: 40%;
+}
+.impression--description {
+  font-size: 1rem;
+}
+@media screen and (min-width: 38rem) {
+  .impression--description {
+    font-size: calc(1rem + 0.5 * ((100vw - 38rem) / 32));
+  }
+}
+@media screen and (min-width: 70rem) {
+  .impression--description {
+    font-size: 1.5rem;
+  }
+}
+.impression--description a {
+  text-decoration: none;
+}
+.impression .buttons {
+  margin-top: 2em;
 }
