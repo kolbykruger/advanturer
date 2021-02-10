@@ -25,7 +25,7 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-html[lang="en"] {
+html[lang='en'] {
     opacity: 0;
 }
 
@@ -61,31 +61,33 @@ a {
 }
 
 h1 {
-    @include fluid('font-size', 2.5rem, 3.5rem);
+    @include fluid('font-size', 2.5rem, 3.125rem);
     //@include fluid('line-height', 1em, 1.2em);
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 h2 {
-    @include fluid('font-size', 1.75rem, 2.5rem);
+    @include fluid('font-size', 1.75rem, 2.375rem);
     //@include fluid('line-height', 1em, 1.2em);
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h3 {
-    @include fluid('font-size', 1.25rem, 1.75rem);
+    @include fluid('font-size', 1.25rem, 1.625rem);
     //@include fluid('line-height', 1em, 1.2em);
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h1,
 h2,
 h3 {
+    font-family: $font-1;
     margin: 0 0 0.25em;
     width: 100%;
+    text-transform: uppercase;
 }
 
 ol,
@@ -99,7 +101,6 @@ ul {
 
 ul {
     list-style: outside disc;
-
 }
 
 li {
@@ -128,13 +129,13 @@ blockquote::after {
 }
 
 blockquote::before {
-    content: "\f10d";
+    content: '\f10d';
     left: 0.5em;
     top: 0.5em;
 }
 
 blockquote::after {
-    content: "\f10e";
+    content: '\f10e';
     right: 0.5em;
     bottom: 0.5em;
 }
@@ -151,10 +152,9 @@ img {
 }
 
 figure {
-
     @media (max-width: 768px) {
         //Redactor wraps img tags with a figure
-        &[style*="float"] {
+        &[style*='float'] {
             float: none !important;
             width: 100% !important;
             margin: 0.5em auto !important;
@@ -167,7 +167,6 @@ main {
 }
 
 article {
-
 }
 
 section {
@@ -180,7 +179,7 @@ section {
     margin: 0 auto;
     padding: 1em;
 
-    & &{
+    & & {
         padding: 0;
     }
 }
@@ -200,7 +199,7 @@ hr {
 hr::before {
     content: '.....';
     letter-spacing: 0.6em;
-    margin: 0 0 0 .6em;
+    margin: 0 0 0 0.6em;
 }
 
 .reset {
@@ -226,11 +225,11 @@ hr::before {
 }
 
 ::selection {
-  background: $color-1;
-  color: #fff;
+    background: $color-1;
+    color: #fff;
 }
 
 ::-moz-selection {
-  background: $color-1;
-  color: #fff;
+    background: $color-1;
+    color: #fff;
 }

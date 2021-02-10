@@ -1,18 +1,18 @@
-(function() {
+;(function () {
     WebFontConfig = {
-      active: function() {
-        sessionStorage.fonts = true;
-      },
-      google: {
-        families: ['Open+Sans:300,400,400i,500,600,700']
-      },
-      timeout: 2000
-    };
-
-    (function(d) {
-      var wf = d.createElement('script'), s = d.scripts[0];
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-      wf.async = true;
-      s.parentNode.insertBefore(wf, s);
-    })(document);
-})();
+        active: function () {
+            sessionStorage.fonts = true
+        },
+        google: {
+            families: ['Rubik:300,400,400i,500,600,700', 'Karla:400,400i,500,500i,600,600i,800'],
+        },
+        timeout: 2000,
+    }
+    ;(function (d) {
+        var wf = d.createElement('script'),
+            s = d.scripts[0]
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
+        wf.async = true
+        s.parentNode.insertBefore(wf, s)
+    })(document)
+})()

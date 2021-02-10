@@ -1,4 +1,5 @@
 .nav {
+    flex: 1;
     text-align: center;
     user-select: none;
     z-index: 10;
@@ -23,8 +24,8 @@
             overflow: hidden;
 
             a {
-                @include fs(13px);
-                padding: 10px;
+                @include fs(14px);
+                padding: 1em;
                 margin: 0;
 
                 &:hover,
@@ -39,9 +40,10 @@
         display: flex;
         flex-flow: row wrap;
         align-items: center;
+        justify-content: center;
 
         > li {
-            margin: 0 0 0 32px;
+            margin: 0 0 0 2.5em;
         }
 
         li:last-child ul {
@@ -56,7 +58,6 @@
         display: block;
 
         &.open {
-
             > a {
                 color: $color-1;
             }
@@ -70,10 +71,11 @@
     }
 
     a {
-        @include fs(16px);
+        @include fs(18px);
         display: block;
         color: $color-0;
         text-decoration: none;
+        text-transform: uppercase;
         transition: $transition-1;
 
         &:hover,
@@ -84,7 +86,8 @@
         i {
             @include fs(12px);
             cursor: pointer;
-            margin: 0 0 0 6px;
+            margin: 0 0 0 2px;
+            opacity: 0.65;
         }
     }
 

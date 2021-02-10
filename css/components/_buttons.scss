@@ -1,5 +1,5 @@
 $button-color: #fff;
-$button-background: $color-1;
+$button-background: $color-2;
 
 /* Button Styling */
 .buttons {
@@ -20,15 +20,16 @@ $button-background: $color-1;
     &-right {
         justify-content: flex-end;
     }
-
 }
 
 // Reset styles for all buttons
 .button {
     cursor: pointer;
-    font-family: inherit;
+    font-family: $font-1;
     font-size: inherit;
     line-height: inherit;
+    text-transform: uppercase;
+    font-weight: 600;
     color: $button-color;
     border: none;
     outline: none;
@@ -39,11 +40,13 @@ $button-background: $color-1;
 .button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     margin: 0;
-    padding: 0.75em 1em;
+    padding: 1em;
     background: $button-background;
     color: $button-color;
-    border-radius: 0.25em;
+    border-radius: 3em;
+    min-width: 160px;
     line-height: 1;
     transition: 150ms ease;
     text-decoration: none;
@@ -85,23 +88,64 @@ $button-background: $color-1;
         }
     }
     &-ghost {
+        --button-color: #{$button-background};
         background: transparent;
-        color: $button-background;
-        border: 1px solid $button-background;
+        color: var(--button-color);
+        border: 2px solid var(--button-color);
+        font-weight: 800;
+
+        &-secondary {
+            --button-color: #{$color-4};
+        }
+
+        &-tertiary {
+            --button-color: #{$color-2};
+        }
+
+        &-quartnary {
+            --button-color: #{$color-2};
+        }
 
         &:hover,
         &:focus {
             background: transparent;
             box-shadow: none;
             color: $color-2;
-            border-color: $color-2
+            border-color: $color-2;
         }
     }
-    
+
+    &-secondary {
+        background: $color-4;
+
+        &:hover,
+        &:focus {
+            background: darken($color-4, 10%);
+        }
+    }
+
+    &-tertiary {
+        background: $color-1;
+
+        &:hover,
+        &:focus {
+            background: darken($color-1, 10%);
+        }
+    }
+
+    &-quartnary {
+        background: $color-3;
+
+        &:hover,
+        &:focus {
+            background: darken($color-3, 10%);
+        }
+    }
+
     &[disabled] {
         background: $color-grey-1;
         color: $color-0;
-        cursor:default;
+        cursor: default;
 
         &:hover,
         &:focus {
@@ -111,7 +155,7 @@ $button-background: $color-1;
 
     @media (max-width: 768px) {
         &,
-        + &{
+        + & {
             margin: 0 1em 1em 0;
         }
     }
