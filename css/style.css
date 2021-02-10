@@ -547,7 +547,7 @@ html.wf-inactive {
 
 body {
   color: #231f20;
-  background: #f1f2f3;
+  background: #fff;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -1119,7 +1119,7 @@ hr::before {
   list-style: none;
 }
 .mobile_nav ul.top {
-  background: #f1f2f3;
+  background: #f6f9fc;
   padding-bottom: 5em;
 }
 .mobile_nav ul.top > li > a {
@@ -1169,7 +1169,7 @@ hr::before {
   transition: max-height 0.15s ease-in-out;
 }
 .mobile_nav .drop {
-  background: #f1f2f3;
+  background: #f6f9fc;
   border-left: 0.5em solid #bf1f2f;
 }
 .mobile_nav .drop li:not(:last-of-type) {
@@ -1494,7 +1494,7 @@ body.menu-open .mobile_nav {
   min-width: 120px;
 }
 .button[disabled] {
-  background: #f1f2f3;
+  background: #f6f9fc;
   color: #231f20;
   cursor: default;
 }
@@ -1695,7 +1695,7 @@ body.menu-open .mobile_nav {
   transition: 180ms ease;
 }
 .autocomplete-items a:hover, .autocomplete-items a:focus, .autocomplete-items a.autocomplete-active {
-  background: #f1f2f3;
+  background: #f6f9fc;
 }
 
 .search {
@@ -2337,7 +2337,7 @@ table {
   height: auto !important;
   display: table;
   background: #fff;
-  border-color: #f1f2f3;
+  border-color: #f6f9fc;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -2363,7 +2363,18 @@ table td {
 }
 
 .products-widget {
-  padding: 6em 0;
+  padding: 5em 0;
+  background: #f6f9fc;
+  margin-bottom: 0;
+}
+.products-widget .shop-by-collection {
+  padding: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+.products-widget .shop-by-collection .section-heading {
+  margin-bottom: 1em;
 }
 
 .product-card {
@@ -2440,7 +2451,6 @@ table td {
 .product-slider .flickity-viewport {
   width: 100%;
 }
-
 .collections .container {
   max-width: 100%;
   padding: 0;
@@ -2522,6 +2532,7 @@ table td {
   height: 100vh;
   background: #e9ebec;
   margin-top: -1px;
+  margin-bottom: 0;
 }
 .impression--image {
   position: absolute;
