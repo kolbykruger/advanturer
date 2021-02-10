@@ -31,9 +31,14 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            right: 80%;
-            width: 20vw;
-            background: linear-gradient(to left, rgba(255, 255, 255, 0), lighten($color-4, 40%));
+            right: 40vw;
+            width: 60vw;
+            background: linear-gradient(
+                to left,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0.8) 25%,
+                lighten($color-4, 40%)
+            );
             z-index: 2;
         }
 
