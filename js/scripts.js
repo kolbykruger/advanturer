@@ -127,13 +127,12 @@ $('.slideshow .container').flickity({
 
 $('.product-slider').flickity({
     cellSelector: '.product-card',
-    wrapAround: true,
+    wrapAround: false,
     adaptiveHeight: false,
     cellAlign: 'left',
     prevNextButtons: true,
     pageDots: true,
     imagesLoaded: true,
-    autoPlay: 5000,
     //groupCells: 3,
 })
 

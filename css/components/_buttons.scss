@@ -125,20 +125,20 @@ $button-background: $color-2;
     }
 
     &-tertiary {
-        background: $color-1;
+        background: $color-4;
 
         &:hover,
         &:focus {
-            background: darken($color-1, 10%);
+            background: darken($color-4, 10%);
         }
     }
 
     &-quartnary {
-        background: $color-3;
+        background: $color-6;
 
         &:hover,
         &:focus {
-            background: darken($color-3, 10%);
+            background: darken($color-6, 10%);
         }
     }
 

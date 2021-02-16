@@ -1,10 +1,21 @@
 .footer {
+    position: relative;
     width: 100%;
-    background: $color-grey-2;
-    margin: 1em 0 0;
+    background: #fff;
+    padding: 6em 0 3em;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: calc(100% - 1px);
+        left: 0;
+        height: 10vh;
+        width: 100%;
+        background: #fff;
+        clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+    }
 
     .container {
-
     }
 
     .group {
@@ -17,7 +28,7 @@
 
         img {
             width: 100%;
-            max-width: 100px;
+            max-width: 150px;
         }
     }
 
@@ -43,7 +54,6 @@
         padding: 0;
 
         li {
-
         }
 
         a {
@@ -64,15 +74,29 @@
         align-items: center;
         width: 100%;
         margin-top: 3em;
-        padding-top: 2em;
-        border-top: 1px solid #ddd;
+        padding-top: 6em;
+
+        .copyright {
+            flex: 1;
+        }
     }
 
     .ewd {
         width: 200px;
 
+        &_wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
         img {
             width: 100%;
         }
+    }
+
+    .social-icons {
+        flex: 1;
     }
 }

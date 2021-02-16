@@ -2,6 +2,7 @@
     &-widget {
         padding: 5em 0;
         background: $color-grey-1;
+        background: linear-gradient(to bottom right, #fff, $color-grey-1);
         margin-bottom: 0;
 
         .shop-by-collection {

@@ -4,4 +4,12 @@
     margin: 0 auto 1em;
     padding: 0;
     text-align: center;
+
+    h2,
+    h3 {
+        @include fluid('font-size', 2.5rem, 4.5rem);
+        font-family: $font-0;
+        font-weight: 300;
+        text-transform: initial;
+    }
 }

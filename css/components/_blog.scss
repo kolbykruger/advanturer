@@ -1,6 +1,32 @@
 .blog {
     margin: 0 auto;
 
+    &.blog-widget {
+        background: $color-0;
+        padding: 6em 0;
+        padding-bottom: calc(6em + 10vh);
+
+        h2 {
+            color: #fff;
+        }
+
+        .post {
+            color: #fff;
+            background: none;
+
+            .info {
+                padding: 2em 0;
+            }
+
+            &:hover,
+            &:focus {
+                img {
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+
     &.blog-layout {
         .post {
             &:first-of-type {
@@ -40,11 +66,12 @@
     }
 
     .post {
-        width: calc(33.333% - 2em);
-        margin: 1em;
+        width: calc(33.333% - 4em);
+        margin: 2em;
         border-radius: 0.25em;
         overflow: hidden;
         background: #fff;
+        box-shadow: $box-shadow-3;
         transition: $transition-1;
 
         a {
